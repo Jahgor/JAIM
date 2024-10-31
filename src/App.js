@@ -24,6 +24,8 @@ function ImageGenerator() {
     }
   };
 
+  (console.log) // added so i can add files to git
+
   return (
     <div>
       <h1>Generate an Image</h1>
