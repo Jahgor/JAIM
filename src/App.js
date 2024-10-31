@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './App.css'
 
 function ImageGenerator() {
   const [prompt, setPrompt] = useState("");
@@ -24,19 +25,20 @@ function ImageGenerator() {
     }
   };
 
-  (console.log) // added so i can add files to git
-
   return (
-    <div>
-      <h1>Generate an Image</h1>
-      <input
-        type="text"
-        value={prompt}
-        onChange={(e) => setPrompt(e.target.value)}
-        placeholder="Enter a prompt"
-      />
-      <button onClick={generateImage}>Generate Image</button>
-      {image && <img src={image} alt="Generated" />}
+    <div className="App-header">
+      <div className="image-generator">
+        <h1>Generate Art</h1>
+        <input
+          type="text"
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
+          placeholder="Enter a prompt"
+          className="prompt-input"
+        />
+        <button onClick={generateImage} className="generate-button">Generate Image</button>
+        {image && <img src={image} alt="Generated" className="generated-image" />}
+      </div>
     </div>
   );
 }
