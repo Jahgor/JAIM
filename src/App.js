@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './App.css'
+import Navbar from './components/Navbar'; // Import the Navbar component
 
 function ImageGenerator() {
   const [prompt, setPrompt] = useState("");
@@ -27,6 +28,7 @@ function ImageGenerator() {
 
   return (
     <div className="App-header">
+      <Navbar />
       <div className="image-generator">
         <h1>Generate Art</h1>
         <input
