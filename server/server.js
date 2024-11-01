@@ -12,7 +12,8 @@ app.use(express.json());
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
 // Use CORS middleware
 app.use(cors({
-  origin: "http://localhost:3000" // Allow requests from React frontend
+  // origin: "http://localhost:3000" // Allow requests from React frontend
+  origin: 'https://jaim-chhyb2ghegajenam.canadacentral-01.azurewebsites.net' // Replace with your frontend URL
 }));
 
 app.post("/generate-image", async (req, res) => {
@@ -33,5 +34,10 @@ app.post("/generate-image", async (req, res) => {
   }
 });
 
+//Comenting this out for azure deployment
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+//in case needed for sever.package.json in the start
+//    "start": "node server.js" (Line 7)
+//    "start": "node ./bin/www"
