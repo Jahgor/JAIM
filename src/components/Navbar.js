@@ -5,7 +5,7 @@ import './Navbar.css'; // Import the CSS for the navbar
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">My Image Generator</div>
+      <div className="navbar-logo">Jahmaro's Artificial Image Generator</div>
       {/* Uncomment this block when ready to add links
       <ul className="navbar-links">
         <li><a href="#home">Home</a></li>

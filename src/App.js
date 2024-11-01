@@ -10,9 +10,10 @@ function ImageGenerator() {
   const generateImage = async () => {
     console.log("Button was pressed"); //Debug to see if code makes it to here , This works
     try {
-      const response = await axios.post("http://localhost:5000/generate-image", { //Gets image from backend server
-        prompt,
-      });
+      // const response = await axios.post("http://localhost:5000/generate-image", { //Gets image from backend server
+      //   prompt,
+      const response = await axios.post("https://jaim-chhyb2ghegajenam.canadacentral-01.azurewebsites.net/generate-image", prompt,
+      );
       console.log("Response received:", response.data); // Debug to check the response data
 
       // Update to extract the URL from the response data array
@@ -46,3 +47,5 @@ function ImageGenerator() {
 }
 
 export default ImageGenerator;
+
+// module.exports = app
